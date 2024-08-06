@@ -1,0 +1,15 @@
+cd 'C:\Users\apcwy\OneDrive - Massachusetts Institute of Technology\MIT_postdoc\TGS\Data\Kyocera\Kyocera_W_W'
+set ylabel "Thermal diffusivity [mm^2s^{-1}]" offset 1,0
+set y2label "SAW speed [km s^{-1}]
+set yrange [30:80]
+set ytics 10 nomirror
+set y2range [2.630:2.65]
+set y2tics 0.004
+set xrange [0:10.1]
+set xtics 2 nomirror
+#set title '10.26 MeV W-ions into W, Room Temperature'
+set key top right
+set xlabel "Dose [dpa]" offset 2,0
+set term png size 1300,1000 enhanced font "Times,28"
+set output '10.26_MeV_W_into_W_vs_dpa.png'
+plot 'processed_data_W_into_W.txt' u 2:($3*1E6):($4*1E6) with yerrorbars t 'Thermal diffusivity' lc rgb "#6a00a8" pt 11 ps 0.7 lw 3, 'processed_data_W_into_W.txt' u 2:($5/1E3) t 'SAW speed' lc rgb "#0d0887" pt 3 ps 0.7 lw 3 axis x1y2

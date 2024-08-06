@@ -1,0 +1,9 @@
+cd 'C:\Users\apcwy\OneDrive - Massachusetts Institute of Technology\MIT_postdoc\TGS\Data\Tungsten_Fuzz\2024-05\2024-05-05\plotting'
+set ylabel "Detector response [mV]" offset 2,0
+set yrange [-10:120]
+set ytics 10 nomirror
+set xrange [0:50]
+set xlabel "Time [ns]" offset 2,0
+set term png size 1200,1000 enhanced font "Times,28"
+set output 'run_end.png'
+plot 'DataOfRaw_end.txt' u 1:2 with lines notitle lc rgb "#0d0887" lw 3

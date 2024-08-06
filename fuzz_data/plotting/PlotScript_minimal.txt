@@ -1,0 +1,13 @@
+cd 'C:\Users\apcwy\OneDrive - Massachusetts Institute of Technology\MIT_postdoc\TGS\Data\Tungsten_Fuzz\2024-05\2024-05-05\plotting'
+set tics font ",47"
+set xrange [0:40]
+set yrange [-10:120]
+set xlabel font ",47"
+set xtics 0,10,40
+set ylabel font ",47"
+set ytics 0,40,120
+set xlabel "Time [ns]" offset 0,0.5
+set ylabel "Detector response [mV]" offset 2,0
+set term pngcairo font "Times New Roman,45" size 1200,1000 enhanced 
+set output 'Tungsten_650C.png'
+plot 'DataOfRaw_start.txt' u 1:2 w l notitle lc rgb "black" lw 3

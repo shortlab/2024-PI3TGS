@@ -1,0 +1,1 @@
+These prints are compatible with the Hamamatsu C5658 APD modules used in many TGS systems [https://www.hamamatsu.com/us/en/product/optical-sensors/apd/apd-module/C5658.html]
